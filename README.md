@@ -26,8 +26,10 @@
 
 SOCTrace est une application web conçue pour les équipes SOC (Security Operations Center) qui ont besoin de suivre et de documenter les changements apportés à leur infrastructure de sécurité. Elle offre une solution intuitive, sécurisée et centralisée pour gérer les changements avec authentification, audit trail complet et export/import de données.
 
-**Version:** 2.4  
+**Version:** 1.2  
 **Dernière mise à jour:** Février 2024
+
+<img width="1447" height="684" alt="Capture d’écran 2026-02-17 à 15 39 30" src="https://github.com/user-attachments/assets/28d8f499-6c61-4387-96f9-5fb875f9df7c" />
 
 ## ✨ Caractéristiques
 
