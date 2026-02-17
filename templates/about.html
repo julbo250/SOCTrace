@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de SOCTrace</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --secondary: #dc2626;
+            --accent: #10b981;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --border: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1f3a 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            background: rgba(30, 58, 138, 0.5);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h1 i {
+            color: #3b82f6;
+        }
+
+        .back-btn {
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(59, 130, 246, 0.4);
+        }
+
+        .content {
+            background: rgba(30, 58, 138, 0.2);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            color: #3b82f6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 i {
+            color: #10b981;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            padding: 12px;
+            margin: 10px 0;
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-list i {
+            color: #10b981;
+            font-size: 1.2rem;
+        }
+
+        .version {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .version strong {
+            color: #10b981;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            color: var(--text-secondary);
+        }
+
+        .team {
+            background: rgba(59, 130, 246, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <i class="fas fa-shield-alt"></i>
+                SOCTrace
+            </h1>
+            <a href="/" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Retour
+            </a>
+        </header>
+
+        <div class="content">
+            <h2><i class="fas fa-info-circle"></i> À propos de SOCTrace</h2>
+            <p>
+                SOCTrace est une application web moderne conçue pour gérer et suivre les changements 
+                au sein de votre infrastructure SOC (Security Operations Center). Elle offre une solution 
+                intuitive et sécurisée pour maintenir un inventaire complet des modifications apportées 
+                à vos systèmes de sécurité.
+            </p>
+
+            <h2><i class="fas fa-star"></i> Caractéristiques Principales</h2>
+            <ul class="feature-list">
+                <li><i class="fas fa-lock"></i> Authentification sécurisée avec hachage SCRYPT</li>
+                <li><i class="fas fa-plus-circle"></i> Gestion complète des changements (ajout, modification, suppression)</li>
+                <li><i class="fas fa-file-csv"></i> Import/Export de données en format CSV</li>
+                <li><i class="fas fa-cog"></i> Gestion dynamique des types de produits et changements</li>
+                <li><i class="fas fa-users"></i> Gestion des utilisateurs et des permissions</li>
+                <li><i class="fas fa-key"></i> Modification sécurisée du mot de passe</li>
+                <li><i class="fas fa-mobile-alt"></i> Interface responsive et moderne</li>
+                <li><i class="fas fa-database"></i> Persistance garantie des données en base de données</li>
+            </ul>
+
+            <h2><i class="fas fa-graduation-cap"></i> Pour qui?</h2>
+            <p>
+                SOCTrace est destiné aux équipes SOC internes, aux analystes de sécurité et aux administrateurs 
+                qui ont besoin de suivre et de documenter les changements apportés à leur infrastructure 
+                de sécurité de manière centralisée et sécurisée.
+            </p>
+
+            <h2><i class="fas fa-shield-alt"></i> Sécurité</h2>
+            <p>
+                La sécurité est au cœur de SOCTrace:
+            </p>
+            <ul class="feature-list">
+                <li><i class="fas fa-lock"></i> Mots de passe hachés avec l'algorithme SCRYPT (irréversible)</li>
+                <li><i class="fas fa-lock"></i> Authentification obligatoire pour accéder aux données</li>
+                <li><i class="fas fa-lock"></i> Cookies sécurisés et HttpOnly</li>
+                <li><i class="fas fa-lock"></i> Gestion des sessions pour éviter les accès non autorisés</li>
+            </ul>
+
+            <h2><i class="fas fa-server"></i> Architecture</h2>
+            <p>
+                SOCTrace est une application web full-stack moderne:
+            </p>
+            <ul class="feature-list">
+                <li><i class="fas fa-python"></i> Backend: Flask (Python)</li>
+                <li><i class="fas fa-database"></i> Base de données: SQLite avec persistance Docker</li>
+                <li><i class="fas fa-html5"></i> Frontend: HTML5, CSS3, JavaScript moderne</li>
+                <li><i class="fas fa-docker"></i> Déploiement: Docker et Docker Compose</li>
+            </ul>
+
+            <div class="version">
+                <strong>Version 2.4</strong><br>
+                Février 2024
+            </div>
+
+            <h2><i class="fas fa-users"></i> Équipe</h2>
+            <div class="team">
+                <p>
+                    SOCTrace a été développé pour répondre aux besoins spécifiques des équipes SOC 
+                    qui nécessitent une solution fiable pour tracer les changements de leur infrastructure.
+                </p>
+            </div>
+
+            <h2><i class="fas fa-headset"></i> Support</h2>
+            <p>
+                Pour toute question ou problème technique, veuillez contacter l'administrateur de votre système.
+            </p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 SOCTrace. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>
