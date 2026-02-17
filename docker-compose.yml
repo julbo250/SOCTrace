@@ -1,0 +1,21 @@
+services:
+  web:
+    build: .
+    container_name: soc-inventory-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - soc-data:/app/data
+      - ./app.py:/app/app.py:ro
+      - ./manage_users.py:/app/manage_users.py:ro
+      - ./templates:/app/templates:ro
+      - ./.env:/app/.env:ro
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+volumes:
+  soc-data:
+    driver: local
